@@ -53,10 +53,10 @@ you can label latter also</br>
 
 `sudo tar -xvpzf /path/to/backup.tar.gz -C /media/whatever --numeric-owner`
 
-A brief explanation:
-x - Tells tar to extract the file designated by the f option immediately after. In this case, the archive is /home/test/backup.tar.gz
--C <directory> - This option tells tar to change to a specific directory before extracting. In this example, we are restoring to the root (/) directory.
---numeric-owner - This option tells tar to restore the numeric owners of the files in the archive, rather than matching to any user names in the environment you are restoring from. This is due to that the user id:s in the system you want to restore don't necessarily match the system you use to restore (eg a live CD).
+A brief explanation:</br>
+__x__ - Tells tar to extract the file designated by the f option immediately after. In this case, the archive is /home/test/backup.tar.gz</br>
+__-C <directory>__ - This option tells tar to change to a specific directory before extracting. In this example, we are restoring to the root (/) directory.</br>
+__--numeric-owner__ - This option tells tar to restore the numeric owners of the files in the archive, rather than matching to any user names in the environment you are restoring from. This is due to that the user id:s in the system you want to restore don't necessarily match the system you use to restore (eg a live CD).
 
 ## tunning after restore 
 sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
