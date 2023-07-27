@@ -44,6 +44,9 @@ Format the new FAT32 partition with a FAT32 filesystem:</br>
 `sudo mkfs.fat -n boot_fs -F 32 /dev/sda1 $mydev1`</br>
 `sudo mkfs.ext4 -L root_fs $mydev2` 
 
+incase using f2fs for ext4 use </br>
+`sudo mkfs.f2fs /dev/sdb2`  but make sure your tarbarr is injected with  `sudo apt-get install f2fs-tools`
+
 you can label latter also</br>
 `fatlabel /dev/device boot_fs`</br>
 `e2label /dev/device root_fs`</br>
