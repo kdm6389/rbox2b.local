@@ -54,9 +54,15 @@ you can label latter also</br>
 `e2label /dev/device root_fs`</br>
 
 #### But the best cmd for restoration from tar.gz on some linux PC
-`mount /dev/sda2 /mnt` ; `mount /dev/sda1 /mnt/boot`<br>
-`sudo tar --extract --gzip --preserve-permissions --acls --selinux --xattrs --atime-preserve --numeric-owner --same-owner --file=root_fs.tar.gz /mnt/`<br>
-`sudo tar --extract --gzip --preserve-permissions --acls --selinux --xattrs --atime-preserve --numeric-owner --same-owner --file=boot_fs.tar.gz /mnt/boot`<br>
+`mount /dev/sda2 /mnt ; mount /dev/sda1 /mnt/boot`
+
+`cd /mnt/`
+
+`sudo tar --extract --gzip --preserve-permissions --acls --selinux --xattrs --atime-preserve --numeric-owner --same-owner --file=root_fs.tar.gz`<br>
+
+`#cd /mnt/boot (dont use this stay in /mnt)`
+
+`sudo tar --extract --gzip --preserve-permissions --acls --selinux --xattrs --atime-preserve --numeric-owner --same-owner --file=boot_fs.tar.gz`<br>
 
     A brief explanation:
        -f, --file
