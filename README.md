@@ -33,7 +33,7 @@ Copy and paste the following as a single command to wipe the target drive, creat
       p
       1
       2048
-      -0
+      +256M
       t
       0c
       a
@@ -98,5 +98,5 @@ Disk identifier: 0x`4c4e106f`</br>
 2. update partuuuid in __`/etc/fstab`__
 3. `sudo fsck /dev/sda1`
 4. `sudo fsck /dev/sda2`
-5. 1st(just after fresh dd sdcard) cmdline.txt looks like this: </br>
+5. 1st(just after fresh dd sdcard) cmdline.txt to fix all prtition related problem, which looks like this: </br>
    `console=serial0,115200 console=tty1 root=PARTUUID=4c4e106f-02 rootfstype=ext4 fsck.repair=yes rootwait quiet init=/usr/lib/raspberrypi-sys-mods/firstboot`
