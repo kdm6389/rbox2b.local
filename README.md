@@ -53,12 +53,6 @@ you can label latter also</br>
 `fatlabel /dev/device boot_fs`</br>
 `e2label /dev/device root_fs`</br>
 
-`sudo tar -xvpzf /path/to/backup.tar.gz -C /media/whatever --numeric-owner` or </br>
---acls --xattrs -xpzf 
-`sudo tar -p -s --atime-preserve --same-owner --acls --selinux --xattrs  --one-top-level=/media/$mydevname -zxvf "$alpinetarball"`
-
-
-
 #### But the best cmd for restoration from tar.gz on some linux PC
 `mount /dev/sda2 /mnt` ; `mount /dev/sda1 /mnt/boot`<br>
 `sudo tar --extract --gzip --preserve-permissions --acls --selinux --xattrs --atime-preserve --numeric-owner --same-owner --file=root_fs.tar.gz /mnt/`<br>
