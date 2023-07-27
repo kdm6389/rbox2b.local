@@ -89,10 +89,14 @@ you can label latter also</br>
               that follow.
 
 ## tunning after restore 
-sudo lsblk -o PARTUUID /dev/sda
+sudo lsblk -o PARTUUID /dev/sda</br>
+or</br>
+sudo fdisk -l /dev/loop1 | grep identifier</br>
+Disk identifier: 0x`4c4e106f`</br>
+
 1. udate partuuid and "init=/usr/lib/raspberrypi-sys-mods/firstboot" in __`/boot/cmdline.txt`__
 2. update partuuuid in __`/etc/fstab`__
 3. `sudo fsck /dev/sda1`
 4. `sudo fsck /dev/sda2`
-5. 1st cmdline.txt looks like this
+5. 1st(just after fresh dd sdcard) cmdline.txt looks like this: 
    console=serial0,115200 console=tty1 root=PARTUUID=4c4e106f-02 rootfstype=ext4 fsck.repair=yes rootwait quiet init=/usr/lib/raspberrypi-sys-mods/firstboot
