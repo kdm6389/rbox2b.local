@@ -19,7 +19,7 @@ x - Tells tar to extract the file designated by the f option immediately after. 
 --numeric-owner - This option tells tar to restore the numeric owners of the files in the archive, rather than matching to any user names in the environment you are restoring from. This is due to that the user id:s in the system you want to restore don't necessarily match the system you use to restore (eg a live CD).
 
 # tunning after restore 
-1. udate partuuid in `/boot/cmdline.txt`
+1. __udate partuuid in `/boot/cmdline.txt`__
 2. update partuuuid in `/etc/fstab`
 3. `sudo fsck /dev/sda1`
 4. `sudo fsck /dev/sda2`
