@@ -59,17 +59,10 @@ you can label latter also</br>
 
 
 
-But the best one for restoration Final
-
-
--C /media/whatever ` or </br>
- 
- --one-top-level=/media/$mydevname 
-
-
-
-`sudo tar --extract --gzip --preserve-permissions --acls --selinux --xattrs --atime-preserve --numeric-owner --same-owner --file=boot_fs.tar.gz /boot`
-
+#### But the best cmd for restoration from tar.gz on some linux PC
+`mount /dev/sda2 /mnt` ; `mount /dev/sda1 /mnt/boot`<br>
+`sudo tar --extract --gzip --preserve-permissions --acls --selinux --xattrs --atime-preserve --numeric-owner --same-owner --file=root_fs.tar.gz /mnt/`<br>
+`sudo tar --extract --gzip --preserve-permissions --acls --selinux --xattrs --atime-preserve --numeric-owner --same-owner --file=boot_fs.tar.gz /mnt/boot`<br>
 
     A brief explanation:
        -f, --file
