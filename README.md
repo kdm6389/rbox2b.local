@@ -40,12 +40,13 @@ Copy and paste the following as a single command to wipe the target drive, creat
       w
     EOF
 
-Format the new FAT32 partition with a FAT32 filesystem: 
-`sudo mkfs.vfat -n boot_fs $mydev1`
+Format the new FAT32 partition with a FAT32 filesystem:</br>
+`sudo mkfs.fat -n boot_fs -F 32 /dev/sda1 $mydev1`</br>
 `sudo mkfs.ext4 -L root_fs $mydev2` 
 
-you can label latter also
-`fatlabel /dev/device boot_fs`
+you can label latter also</br>
+`fatlabel /dev/device boot_fs`</br>
+`e2label /dev/device root_fs`</br>
 
 `sudo tar -xvpzf /path/to/backup.tar.gz -C /media/whatever --numeric-owner`
 
