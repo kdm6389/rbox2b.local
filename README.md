@@ -14,6 +14,38 @@ ref: https://help.ubuntu.com/community/BackupYourSystem/TAR </br>
 `sudo tar --create --preserve-permissions --gzip --file=${HOSTNAME}.boot.$(date +"%Y-%m-%d-%H-%M-%S").tar.gz --acls --selinux --xattrs --exclude=/boot/.Trash-*  --exclude=/boot/"System Volume Information" --exclude=/boot/"$RECYCLE.BIN" --one-file-system --record-size=715776K /boot &`
 
 ## restore tar backup on linux pc
+  ### restore partition od SD-Card incase
+  Set the environment variable 'mydev' to the device file name of the USB stick that Alpine Linux is to be installed to:
+
+    Warning: BE SURE TO GET THIS RIGHT OR ELSE YOU COULD OVERWRITE THE WRONG DISK!
+
+    mydev=/dev/sdU
+
+Make sure that the target drive's existing partitions, if any, are not mounted:
+
+    umount -q $mydev?
+
+Copy and paste the following as a single command to wipe the target drive, create an MBR partition table, and create a single FAT32 partition (you can ignore any "Partition #1 contains a vfat signature." warning message):
+
+    fdisk -w always $mydev <<EOF
+      o
+      n
+      p
+      1
+      2048
+      -0
+      t
+      0c
+      a
+      w
+    EOF
+
+Format the new FAT32 partition with a FAT32 filesystem: 
+`sudo mkfs.vfat -n boot_fs $mydev1`
+`sudo mkfs.ext4 -L root_fs $mydev2` 
+
+you can label latter also
+`fatlabel /dev/device boot_fs`
 
 `sudo tar -xvpzf /path/to/backup.tar.gz -C /media/whatever --numeric-owner`
 
@@ -23,6 +55,7 @@ x - Tells tar to extract the file designated by the f option immediately after. 
 --numeric-owner - This option tells tar to restore the numeric owners of the files in the archive, rather than matching to any user names in the environment you are restoring from. This is due to that the user id:s in the system you want to restore don't necessarily match the system you use to restore (eg a live CD).
 
 ## tunning after restore 
+sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 1. udate partuuid in __`/boot/cmdline.txt`__
 2. update partuuuid in __`/etc/fstab`__
 3. `sudo fsck /dev/sda1`
