@@ -71,35 +71,26 @@ But the best one for restoration Final
 `sudo tar --extract --gzip --preserve-permissions --acls --selinux --xattrs --atime-preserve --numeric-owner --same-owner --file=boot_fs.tar.gz /boot`
 
 
-
--f, --file
--x, --extract, --get
--s, --preserve-order, --same-order
--v, --verbose
-
+    A brief explanation:
+       -f, --file
+       -x, --extract, --get
+       -s, --preserve-order, --same-order
+       -v, --verbose
        -z, --gzip, --gunzip, --ungzip  or  -J, --xz
-
        -p, --preserve-permissions, --same-permissions
               extract information about file permissions (default for
               superuser)
-
-
-              
        --one-top-level[=DIR]
               Extract all files into DIR, or, if used without argument,
               into a subdirectory named by the base name of the archive
               (minus standard compression suffixes recognizable by
               --auto-compress).
-
-
-              
        --same-owner
               Try extracting files with the same ownership as exists in
               the archive (default for superuser).
        --numeric-owner
               Always use numbers for user/group names.
-
--C, --directory=DIR
+       -C, --directory=DIR
               Change to DIR before performing any operations.  This
               option is order-sensitive, i.e. it affects all options
               that follow.
