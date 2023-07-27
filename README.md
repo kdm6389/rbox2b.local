@@ -88,20 +88,11 @@ you can label latter also</br>
               option is order-sensitive, i.e. it affects all options
               that follow.
 
-              
-
-
-A brief explanation:</br>
-__x__ - Tells tar to extract the file designated by the f option immediately after. In this case, the archive is /home/test/backup.tar.gz</br>
-__-C <directory>__ - This option tells tar to change to a specific directory before extracting. In this example, we are restoring to the root (/) directory.</br>
-__--numeric-owner__ - This option tells tar to restore the numeric owners of the files in the archive, rather than matching to any user names in the environment you are restoring from. This is due to that the user id:s in the system you want to restore don't necessarily match the system you use to restore (eg a live CD).
-
-
-
-
 ## tunning after restore 
-sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
-1. udate partuuid in __`/boot/cmdline.txt`__
+sudo lsblk -o PARTUUID /dev/sda
+1. udate partuuid and "init=/usr/lib/raspberrypi-sys-mods/firstboot" in __`/boot/cmdline.txt`__
 2. update partuuuid in __`/etc/fstab`__
 3. `sudo fsck /dev/sda1`
 4. `sudo fsck /dev/sda2`
+5. 1st cmdline.txt looks like this
+   console=serial0,115200 console=tty1 root=PARTUUID=4c4e106f-02 rootfstype=ext4 fsck.repair=yes rootwait quiet init=/usr/lib/raspberrypi-sys-mods/firstboot
