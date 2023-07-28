@@ -5,6 +5,21 @@ ___
 current version ref: https://raspberrytips.com/raspberry-pi-os-versions/
 
 
+Getting “Cannot set LC_CTYPE to default locale: No such file or directory” Used nano to set Locale on the file directly (using nano) sudo nano /etc/default/locale
+
+    LANG=en_US.UTF-8
+    LC_CTYPE=en_US.UTF-8
+    LC_MESSAGES=en_US.UTF-8
+    LC_ALL=en_US.UTF-8
+
+Did same for `/etc/default/keyboard` and checked the layout line: `XKBLAYOUT="us"`
+
+     sudo reboot
+
+
+
+
+
 
 ## backpup rootfs "/" partition
 __`cd /`__ </br> `sudo tar --create --gzip --file=${HOSTNAME}.rootfs.$(date +"%Y-%m-%d-%H-%M-%S").tar.gz --atime-preserve --preserve-permissions --acls --selinux --xattrs --exclude=/boot/* --exclude=/dev --exclude=/proc --exclude=/tmp --exclude=/mnt --exclude=/home/pi --exclude=/home/stpi/*.gz --exclude=/home/*/.gvfs --exclude=/home/*/.cache --exclude=/home/*/.local/share/Trash --exclude=/sys --exclude=/media --exclude=/run --exclude=/var/log --exclude=/var/swap --exclude=/var/log --exclude=/var/cache/apt --exclude=/var/lib/apt/lists/ --exclude=/usr/src/linux-headers* --exclude=/usr/share/locale --one-file-system --record-size=715776K / &` </br> </br>
