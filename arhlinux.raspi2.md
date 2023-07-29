@@ -91,7 +91,7 @@ Defaults editor=/usr/bin/rvim, !env_editor
 ## 2.5 Time
 The Raspberry Pi does not have a realtime clock, so the time should be updated over the internet on each boot.
 ```
-sudo timedatectl set-timezone America/New_York
+sudo timedatectl set-timezone Asia/Kolkata
 sudo timedatectl set-ntp true
 ```
 
