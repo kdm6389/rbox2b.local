@@ -128,3 +128,5 @@ Disk identifier: 0x`4c4e106f`</br>
 802.11n NIC
 VID=0BDA PID=FFEF
 
+## driver by 
+ref: https://github.com/lwfinger/rtl8188eu
