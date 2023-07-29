@@ -4,6 +4,9 @@ ___
 
 current version ref: https://raspberrytips.com/raspberry-pi-os-versions/
 
+lite version ref: https://downloads.raspberrypi.org/raspios_lite_armhf/images/
+
+
 
 sudo localectl set-locale LANG=en_US.utf8</br>
 Getting “Cannot set LC_CTYPE to default locale: No such file or directory” Used nano to set Locale on the file directly (using nano) `sudo nano /etc/default/locale`
