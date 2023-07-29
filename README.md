@@ -120,3 +120,11 @@ Disk identifier: 0x`4c4e106f`</br>
 4. `sudo fsck /dev/sda2`
 5. 1st(just after fresh dd sdcard) cmdline.txt to fix all prtition related problem, which looks like this: </br>
    `console=serial0,115200 console=tty1 root=PARTUUID=4c4e106f-02 rootfstype=ext4 fsck.repair=yes rootwait quiet init=/usr/lib/raspberrypi-sys-mods/firstboot`
+
+
+
+
+#Rosewill RNX-N150NUB Wireless N150 Nano USB Wi-Fi Adapter 150 Mbps USB2.0
+> 802.11n NIC
+> VID=0BDA PID=FFEF
+
