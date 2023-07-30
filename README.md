@@ -26,6 +26,10 @@ Did same for `/etc/default/keyboard` and checked the layout line: `XKBLAYOUT="us
 
 
 
+# [wifi-conection for debian/raspbian] (wifi-debian.md)
+
+
+
 
 ## backpup rootfs "/" partition
 __`cd /`__ </br> `sudo tar --create --gzip --file=${HOSTNAME}.rootfs.$(date +"%Y-%m-%d-%H-%M-%S").tar.gz --atime-preserve --preserve-permissions --acls --selinux --xattrs --exclude=/boot/* --exclude=/dev --exclude=/proc --exclude=/tmp --exclude=/mnt --exclude=/home/pi --exclude=/home/stpi/*.gz --exclude=/home/*/.gvfs --exclude=/home/*/.cache --exclude=/home/*/.local/share/Trash --exclude=/sys --exclude=/media --exclude=/run --exclude=/var/log --exclude=/var/swap --exclude=/var/log --exclude=/var/cache/apt --exclude=/var/lib/apt/lists/ --exclude=/usr/src/linux-headers* --exclude=/usr/share/locale --one-file-system --record-size=715776K / &` </br> </br>
