@@ -47,6 +47,18 @@ SSH is enabled by default, so connect ethernet and login from another computer. 
 ssh alarm@<ip-address>
 ```
 
+
+## 1.4 USB/WiFi Connection
+`wifi-menu -o`
+
+`netctl enable wlu1u2-Home-WiFi`
+
+`pacman -Syy`
+
+
+
+
+
 # 2 Initial Settings
 
 ## 2.1 Secure accounts
