@@ -26,7 +26,7 @@ Did same for `/etc/default/keyboard` and checked the layout line: `XKBLAYOUT="us
 
 
 
-# [wifi-conection for debian/raspbian] (wifi-debian.md)
+# wifi-conection for [debian/raspbian](wifi-debian.md)
 
 
 
