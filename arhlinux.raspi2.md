@@ -49,11 +49,14 @@ ssh alarm@<ip-address>
 
 
 ## 1.4 USB/WiFi Connection
-`wifi-menu -o`
 
-`netctl enable wlu1u2-Home-WiFi`
+```wifi-menu -o```
 
-`pacman -Syy`
+```netctl enable wlu1u2-Home-WiFi```
+
+```pacman -Syy```
+
+
 
 
 
