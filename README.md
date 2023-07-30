@@ -95,6 +95,9 @@ you can label latter also</br>
 
 #### ⚠️ **Warning:** Don't use `sudo` for fs-restore login into root use `su` 
 
+#### ⚠️ `sync`, always use `sync` slow device like sdcard write, before umount 
+
+
 
     A brief explanation:
        -f, --file
