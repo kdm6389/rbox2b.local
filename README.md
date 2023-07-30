@@ -93,7 +93,7 @@ you can label latter also</br>
 
 `sudo tar --extract --gzip --preserve-permissions --acls --selinux --xattrs --atime-preserve --numeric-owner --same-owner --file=boot_fs.tar.gz`<br>
 
-### Warning: Don't use `sudo` for fs-restore login into root use `su` 
+#### Warning: Don't use `sudo` for fs-restore login into root use `su` 
 
 
     A brief explanation:
