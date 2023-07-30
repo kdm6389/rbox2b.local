@@ -15,3 +15,17 @@ Step 1: Find The Name of Your Wireless Interface And Wireless Network
 wlan0 is a common name for a wireless network interface on Linux systems. On systemd-based Linux distros, you might have a wireless interface named wlp4s0. wlp4s0 are used for usb devices for consitancey for being used in diffrent port and can have more then 1 usb can be present at same time. you can verfy this by using:</br>
 `dmesg | grep "renam"`</br> 
 `r8188eu 1-1.2:1.0 wlu1u2: renamed from wlan0`
+
+### prepare to connect 
+As you can see, the wireless interface isn’t associated with any access point right now. Then run the following command to bring up the wireless interface.
+
+`sudo ip link set dev wlp4s0 up`
+
+If you encounter the following error,
+
+`RTNETLINK answers: Operation not possible due to RF-kill`
+
+you need to unblock Wi-Fi with the following command.
+
+`sudo rfkill unblock wifi`
+
