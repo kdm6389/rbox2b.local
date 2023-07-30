@@ -6,15 +6,17 @@ This tutorial is going to show you how to connect to Wi-Fi network from the comm
 
 Please note that you will need to install the wpa_supplicant software before connecting to Wi-Fi, so you need to connect to Wired Ethernet first, which is done for just one time. If you don’t like this method, please don’t be mad at me. Maybe someday Debian will ship wpa_supplicant out of the box.
 
+
 ## Step 1: Find The Name of Your Wireless Interface And Wireless Network
 
 ### Run iwconfig command to find the name of your wireless interface.
 
 `iwconfig`
 
-wlan0 is a common name for a wireless network interface on Linux systems. On systemd-based Linux distros, you might have a wireless interface named wlu1u2. wlu1u2 are used for usb devices for consitancey for being used in diffrent port and can have more then 1 usb can be present at same time. you can verfy this by using:</br>
-`dmesg | grep "renam"`</br> 
-`r8188eu 1-1.2:1.0 wlu1u2: renamed from wlan0`
+wlan0 is a common name for a wireless network interface on Linux systems. On systemd-based Linux distros, you might have a wireless interface named wlu1u2. wlu1u2 are used for usb devices for consitancey for being used in diffrent port and can have more then 1 usb can be present at same time. you can verfy this by using:
+    
+    dmesg | grep "renam"
+    r8188eu 1-1.2:1.0 wlu1u2: renamed from wlan0
 
 ### prepare to connect 
 As you can see, the wireless interface isn’t associated with any access point right now. Then run the following command to bring up the wireless interface.
