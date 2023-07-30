@@ -125,18 +125,3 @@ Install iotop to view disk I/O activity by process.
 
 Since the Raspberry Pi is going to be running as a headless server, we can allocate more memory towards the CPU, instead of the GPU. In ```/boot/config.txt``` add ```gpu_mem=16```. This is also where you can overclock the Pi if you want. For more information about all of the options see http://elinux.org/RPiconfig.
 
-# 3 Setup a Web Server
-We are going to use nginx, since it is a lightweight, but high performance server.
-
-## 3.1 Installation
-```
-pacman -S nginx
-```
-
-## 3.2 Setup
-
-# 4 PHP and MySQL
-
-# 5 Monitorix
-
-# 6 ZNC
