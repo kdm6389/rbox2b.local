@@ -140,7 +140,7 @@ Disk identifier: 0x`4c4e106f`</br>
 
 
 # Rosewill RNX-N150NUB Wireless N150 Nano USB Wi-Fi Adapter 150 Mbps USB2.0
-802.11n NIC
+[802.11n NIC](wifi-debian.md)
 VID=0BDA PID=FFEF
 
 ## driver by 
