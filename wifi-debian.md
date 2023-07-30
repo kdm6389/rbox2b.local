@@ -12,4 +12,6 @@ Step 1: Find The Name of Your Wireless Interface And Wireless Network
 
 `iwconfig`
 
-wlan0 is a common name for a wireless network interface on Linux systems. On systemd-based Linux distros, you might have a wireless interface named wlp4s0.
+wlan0 is a common name for a wireless network interface on Linux systems. On systemd-based Linux distros, you might have a wireless interface named wlp4s0. wlp4s0 are used for usb devices for consitancey for being used in diffrent port and can have more then 1 usb can be present at same time. you can verfy this by using:</br>
+`dmesg | grep "renam"`</br> 
+`r8188eu 1-1.2:1.0 wlu1u2: renamed from wlan0`
