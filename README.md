@@ -13,10 +13,36 @@ lite version ref: https://downloads.raspberrypi.org/raspios_lite_armhf/images/
 sudo localectl set-locale LANG=en_US.utf8</br>
 Getting “Cannot set LC_CTYPE to default locale: No such file or directory” Used nano to set Locale on the file directly (using nano) `sudo nano /etc/default/locale`
 
-    LANG=en_US.UTF-8
-    LC_CTYPE="en_US.UTF-8"
-    LC_MESSAGES=en_US.UTF-8
-    LC_ALL="en_US.UTF-8"
+        C-type, unicode may not work 
+        LANG=C
+        LC_CTYPE="C"
+        LC_NUMERIC="C"
+        LC_TIME="C"
+        LC_COLLATE="C"
+        LC_MONETARY="C"
+        LC_MESSAGES="C"
+        LC_ALL=
+        
+        or (english - USA)
+        LANG=en_US.UTF-8
+        LANGUAGE=en_US:en
+        LC_CTYPE="en_US.UTF-8"
+        LC_NUMERIC="en_US.UTF-8"
+        LC_TIME="en_US.UTF-8"
+        LC_COLLATE="en_US.UTF-8"
+        LC_MONETARY="en_US.UTF-8"
+        LC_MESSAGES="en_US.UTF-8"
+        LC_PAPER="en_US.UTF-8"
+        LC_NAME="en_US.UTF-8"
+        LC_ADDRESS="en_US.UTF-8"
+        LC_TELEPHONE="en_US.UTF-8"
+        LC_MEASUREMENT="en_US.UTF-8"
+        LC_IDENTIFICATION="en_US.UTF-8"
+        LC_ALL=
+
+ref: https://askubuntu.com/questions/515330/how-do-i-go-about-removing-all-the-language-packs-i-dont-need#:~:text=As%20regards%20actually%20installed%20languages,my%20comment%20on%20your%20question.
+
+    
 
 Did same for `/etc/default/keyboard` and checked the layout line: `XKBLAYOUT="us"`
 
