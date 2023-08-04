@@ -1,6 +1,6 @@
 # setup ssh
 
-[stpi@rbox2b ~]$ ./ssh
+```[stpi@rbox2b ~]$ ./ssh
 [stpi@rbox2b .ssh]$ ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/stpi/.ssh/id_rsa):
@@ -24,7 +24,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 [stpi@rbox2b .ssh]$ mv authorized_keys authorized_keys.1
 [stpi@rbox2b .ssh]$ mv id_rsa.pub authorized_keys
-[stpi@rbox2b .ssh]$ cat id_rsa
+[stpi@rbox2b .ssh]$ cat id_rsa```
 
 
 
