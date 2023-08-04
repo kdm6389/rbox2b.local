@@ -9,13 +9,13 @@
     Your identification has been saved in /home/stpi/.ssh/id_rsa
     Your public key has been saved in /home/stpi/.ssh/id_rsa.pub
     The key fingerprint is:
-    SHA256:8d42KqooIkywxlwU/8aH0x/M0wES/UrpztU3yNETZOc stpi@rbox2b
+    SHA256:2d31AoooIkywxlwU/8aH0x/M0wES/Urpztr3yNETZOc szzz@ydoc3z
     The key's randomart image is:
     +---[RSA 3072]----+
     |   ..    oo.  .o.|
     |   ..     ... .o.|
-    |  .  .  .   o.. E|
-    |.  .  o oooo.o.o |
+    |  .  .  E.   o.. |
+    |.  .o   oooo.o.o |
     |+..    *So+=o.+ .|
     |.=    . o..+o+ o.|
     |+         +.=   o|
