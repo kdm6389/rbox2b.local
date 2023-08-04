@@ -25,8 +25,7 @@
     [stpi@rbox2b .ssh]$ mv authorized_keys authorized_keys.1
     [stpi@rbox2b .ssh]$ mv id_rsa.pub authorized_keys
     [stpi@rbox2b .ssh]$ cat id_rsa
+    [stpi@rbox2b .ssh]$ cp id_rsa /boot/id_rsa_$(uname -n) #boot is fat32 you can copy it on windows also
 
-
-
-### id_rsa.pub ====> is public key ===> it will stay at remote machine 
-### is_rsa =====> private key (keep with you, from where you login) you may need to convert this to other formate as well
+#### id_rsa.pub ====> is public key ===> it will stay at remote machine 
+#### is_rsa =====> private key (keep with you, from where you login) you may need to convert this to other formate as well
