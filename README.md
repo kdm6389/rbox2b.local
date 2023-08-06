@@ -14,7 +14,8 @@
         stpi@rbox2b ~]$ readelf -A /proc/self/exe | grep Tag_ABI_VFP_args
         Tag_ABI_VFP_args: VFP registers
         
-        verdict: cpu is "armel" but not armhf (so dont use armhf) 
+        verdict: cpu is "armel" but not armhf (so dont use armhf)
+        
 
 
 # .
