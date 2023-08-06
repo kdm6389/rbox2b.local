@@ -3,13 +3,13 @@
         Raspberry Pi 2 B 1.1
         Broadcom BCM2836 (only one 64-bit timer signal going to all four cores)
         CPU: 900MHz (quad-core Cortex-A7 cluster )
-        microSD	
-        RAM per core 1024MiB
+        RAM 1024MiB
         1 x LAN	
         4 x USB 2.0
         Instruction set	ARMv7-A (32-bit) / armv7l / armel(debian)
         Identification
         Process node	("40 nm")
+        microSD	
 
         stpi@rbox2b ~]$ readelf -A /proc/self/exe | grep Tag_ABI_VFP_args
         Tag_ABI_VFP_args: VFP registers
