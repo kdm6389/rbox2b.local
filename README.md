@@ -24,6 +24,7 @@ current version ref: https://raspberrytips.com/raspberry-pi-os-versions/
 lite version ref: https://downloads.raspberrypi.org/raspios_lite_armhf/images/
 
 # for arch linux [click here](arhlinux.raspi2.md)
+# for /debian/rasbian/ditpi
 
 
 
