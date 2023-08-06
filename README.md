@@ -26,7 +26,7 @@ lite version ref: https://downloads.raspberrypi.org/raspios_lite_armhf/images/
 # for arch linux [click here](arhlinux.raspi2.md)
 # for /debian/rasbian/ditpi
 
-
+[See it live here](https://kdm6389.github.io/rbox2b.local/)
 
 sudo localectl set-locale LANG=en_US.utf8</br>
 Getting “Cannot set LC_CTYPE to default locale: No such file or directory” Used nano to set Locale on the file directly (using nano) `sudo nano /etc/default/locale`
