@@ -1,6 +1,6 @@
 # Raspberry Pi 2 Mobel B v1.1
 
-        Raspberry Pi 2 B 1.0/1.1
+        Raspberry Pi 2 B 1.1
         Broadcom BCM2836 (only one 64-bit timer signal going to all four cores)
         CPU: 900MHz (quad-core Cortex-A7 cluster )
         microSD	
