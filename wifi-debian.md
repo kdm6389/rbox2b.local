@@ -151,8 +151,8 @@ Save and close the file. Then enable this service.
 
 
 
-
-
+red:
+https://unix.stackexchange.com/questions/483678/debian-connect-to-wifi-automatically-when-in-range
 
 
 
