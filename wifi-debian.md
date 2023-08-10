@@ -111,6 +111,10 @@ Change it to the following. Here we added the configuration file and the wireles
 
 `ExecStart=/sbin/wpa_supplicant -u -s -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlu1u2`
 
+or if you are using old driver
+
+`ExecStart=/sbin/wpa_supplicant -B -D wext -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlx10feed2673c7`
+
 It’s recommended to always try to restart wpa_supplicant when failure is detected. Add the following right below the ExecStart line.
 
 `Restart=always`
