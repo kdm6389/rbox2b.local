@@ -29,3 +29,7 @@
 
 #### id_rsa.pub ====> is public key ===> it will stay at remote machine 
 #### is_rsa =====> private key (keep with you, from where you login) you may need to convert this to other formate as well
+
+
+
+`$ MaxStartups 2:30:10` or `MaxStartups 10:30:60` for stopping multiple attck 
