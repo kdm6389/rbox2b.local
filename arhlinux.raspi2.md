@@ -46,7 +46,7 @@ SSH is enabled by default, so connect ethernet and login from another computer. 
 ```
 ssh alarm@<ip-address>
 ```
-
+[Google 2 Factor Authentication for ssh](https://wiki.archlinux.org/title/Google_Authenticator)
 
 ## 1.4 USB/WiFi Connection
 
