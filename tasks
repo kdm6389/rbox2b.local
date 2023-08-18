@@ -1,0 +1,62 @@
+2. Schedule Tasks with Systemd Timers (without crontab -e)
+
+In most modern Linux distributions, Systemd is the default init system and it comes with a timer functionality that can allow you to schedule your tasks.
+
+First, create a new systemd timer unit file with a .timer extension as shown.
+
+$ sudo nano /etc/systemd/system/myjob.timer
+
+Add the following content to the myjob.timer file:
+
+[Unit]
+Description=My Job Timer
+
+[Timer]
+OnCalendar=*-*-* 00:00:00
+# Replace the OnCalendar value with the desired schedule
+
+[Install]
+WantedBy=timers.target
+
+The OnCalendar field in a systemd timer unit allows you to specify the schedule for your job using a specific format.
+
+    Yearly: yearly or annually
+    Monthly: monthly
+    Weekly: weekly
+    Daily: daily or midnight
+    Hourly: hourly
+    Minutes: You can specify a specific minute using the format *:MM (e.g., *:15 for every 15 minutes) or a specific range using MM-MM (e.g., 10-30 for every minute from 10 to 30).
+
+Here are some examples to illustrate the format:
+
+## Run every day at 3:00 AM ##
+OnCalendar=*-*-* 03:00:00
+
+## Run every Monday and Friday at 10:00 AM ##
+OnCalendar=Mon,Fri *-*-* 10:00:00
+
+## Run every 30 minutes: ##
+OnCalendar=*-*-* *:0/30:00
+
+Next, create a corresponding service unit file with a .service extension in the same directory:
+
+$ sudo nano /etc/systemd/system/myjob.service
+
+Add the following content to the myjob.service file:
+
+[Unit]
+Description=My Job
+
+[Service]
+ExecStart=/path/to/your/job.sh
+# Replace "/path/to/your/job.sh" with the actual command or script to execute
+
+[Install]
+WantedBy=multi-user.target
+
+Enable and start the timer:
+
+$ sudo systemctl enable myjob.timer
+$ sudo systemctl start myjob.timer
+
+This will schedule your job to run according to the specified timer.
