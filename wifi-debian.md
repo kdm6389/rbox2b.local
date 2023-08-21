@@ -155,12 +155,8 @@ Save and close the file. Then enable this service.
 
 
 
-red:
+read:
 https://unix.stackexchange.com/questions/483678/debian-connect-to-wifi-automatically-when-in-range
-
-
-
-
 
 ref1: https://wiki.debian.org/WiFi/HowToUse#Manual
 
@@ -171,7 +167,7 @@ ref3: https://wiki.debian.org/WiFi/HowToUse#Manual
 
 
 ### Simple methord (wifi-menu)
-
+dont beark your head, use this
 ```
 wifi-menu -o
 cd /etc/netctl/
