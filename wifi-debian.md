@@ -170,4 +170,15 @@ ref3: https://wiki.debian.org/WiFi/HowToUse#Manual
 
 
 
+### Simple methord (wifi-menu)
+
+```
+wifi-menu -o
+cd /etc/netctl/
+netctl reenable <profile-listed in /etc/netctl>
+```
+
+
+
+
 
