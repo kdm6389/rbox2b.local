@@ -174,7 +174,7 @@ cd /etc/netctl/
 netctl reenable <profile-listed in /etc/netctl>
 ```
 
-
+`wifi-menu` dont come as in built tools, you need to install it, you can intall it using LAN / RNDIS (android)
 
 
 
