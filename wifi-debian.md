@@ -171,7 +171,7 @@ dont beark your head, use this
 ```
 wifi-menu -o
 cd /etc/netctl/
-sudo netctl list
+netctl list
 netctl reenable <profile-listed in /etc/netctl>
 ```
 Note:<br/>
