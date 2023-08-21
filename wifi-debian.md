@@ -177,7 +177,7 @@ Note:<br/>
 
 `wifi-menu` dont come as in built tools, you need to install it, you can intall it using LAN / RNDIS (android)
 
-
+[ref1](https://unix.stackexchange.com/questions/276844/how-do-i-automatically-execute-netctl-start-tq84-wifi-on-bootup)
 
 
 
