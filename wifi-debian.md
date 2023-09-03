@@ -168,6 +168,9 @@ ref3: https://wiki.debian.org/WiFi/HowToUse#Manual
 
 ### Simple methord (wifi-menu)
 dont beark your head, use this
+```apt-get install netctl```
+`#which depend on <dialog ifplugd netctl resolvconf>`
+
 ```
 wifi-menu -o
 cd /etc/netctl/
